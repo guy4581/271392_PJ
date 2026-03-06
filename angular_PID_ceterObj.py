@@ -126,8 +126,8 @@ while cap.isOpened():
         measurement = np.array([[np.float32(cx_raw)], [np.float32(cy_raw)]])
         estimated = kalman.correct(measurement)
 
-        cx = int(estimated[0])
-        cy = int(estimated[1])
+        cx = int(estimated[0].item())
+        cy = int(estimated[1].item())
 
         # draw centers
         cv2.circle(display, (cx_raw, cy_raw), 4, (0,0,255), -1)   # raw

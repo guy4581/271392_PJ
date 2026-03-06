@@ -10,9 +10,9 @@ model = YOLO("cabbage2.pt")
 CAMERA_HEIGHT = 50.0  # หน่วย cm
 # ค่า K นี้หาได้จากการรันครั้งแรกแล้วปรับให้ตรงกับไม้บรรทัด
 # หรือคำนวณจาก: (ความกว้างพิกเซล * ระยะห่าง) / ขนาดจริง
-PIXEL_CONSTANT = 800.0 
+PIXEL_CONSTANT = 970.0 
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 while cap.isOpened():
     ret, frame = cap.read()

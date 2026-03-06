@@ -4,7 +4,7 @@ import numpy as np
 from ultralytics import YOLO
 
 model = YOLO("rack.pt")
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 while cap.isOpened():
     success, frame = cap.read()
